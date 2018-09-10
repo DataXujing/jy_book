@@ -1,0 +1,41 @@
+--- 
+title: "智能中心项目研发经验手册"
+author: "智能中心"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
+
+# 序言 {-}
+
+
+智能中心技术负责人和项目经理每月第一个周五和第三个周五收集项目研发，项目管理中遇到的一些突发问题和解决方案，记录整理作为智能中心数据科学项目研发经验手册。
+
+目前基于项目研发和管理的整个流程，主要分为十章,分别记载不同项目研发阶段的经验和一些突发情况的应急预案：
+
++ 1.需求阶段
+
++ 2.立项阶段
+
++ 3.项目启动阶段
+
++ 4.项目研发阶段
+
++ 5.项目上线阶段
+
++ 6.项目宣导阶段
+
++ 7.项目总结阶段
+
++ 8.项目后期跟进修改阶段
+
++ 9.项目管理
+
++ 10.其他突发应急预案
+
+
+

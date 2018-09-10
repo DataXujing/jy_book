@@ -1,0 +1,205 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={智能中心项目研发经验手册},
+            pdfauthor={智能中心},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{智能中心项目研发经验手册}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{智能中心}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2018-09-06}
+
+\usepackage{booktabs}
+\usepackage{xeCJK}
+
+\setCJKmainfont{宋体}
+
+\setmainfont{Georgia}
+
+\setromanfont{Georgia}
+
+\setmonofont{Courier New}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{序言}
+\addcontentsline{toc}{chapter}{序言}
+
+智能中心技术负责人和项目经理每月第一个周五和第三个周五收集项目研发，项目管理中遇到的一些突发问题和解决方案，记录整理作为智能中心数据科学项目研发经验手册。
+
+目前基于项目研发和管理的整个流程，主要分为十章,分别记载不同项目研发阶段的经验和一些突发情况的应急预案：
+
+\begin{itemize}
+\item
+  1.需求阶段
+\item
+  2.立项阶段
+\item
+  3.项目启动阶段
+\item
+  4.项目研发阶段
+\item
+  5.项目上线阶段
+\item
+  6.项目宣导阶段
+\item
+  7.项目总结阶段
+\item
+  8.项目后期跟进修改阶段
+\item
+  9.项目管理
+\item
+  10.其他突发应急预案
+\end{itemize}
+
+\chapter{需求阶段}\label{need}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{1.项目需求评估不彻底的问题}
+
+需求评估过程一定要有产品经理的思维，合理规避无法完成或不可能完成的需求。
+
+需求评估时，认真细致的确定每个需求分解步骤，并及时与需求方或项目经理沟通，需求的难点和是否可以立项，以及是否可以解决。这些需求的难点可以列在项目计划书中，这样同时也做好了需求分析和项目难点解析以及打算如何解决这些项目难点。
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\chapter{立项阶段}\label{project}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{1.项目时间规划问题}
+
+项目实施前，一定规划好项目进展中的每一步可能花费的时间及会出现的突发情况，认真填写项目计划表和责任人，一旦出现问题可直接找到责任人;建议权衡工作量和难度合理的预计每一步花费的时间，避免项目延期或提前，这都是不能合理安排项目时间的表现。
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\chapter{项目启动阶段}\label{start}
+
+\chapter{项目研发阶段}\label{model}
+
+\chapter{项目上线阶段}\label{ux90e8ux7f72}
+
+\chapter{项目宣导阶段}\label{ux5ba3ux5bfc}
+
+\chapter{项目总结阶段}\label{ux603bux7ed3}
+
+\chapter{项目后期跟进修改阶段}\label{ux8ddfux8e2a}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{1. 数据处理问题}
+
+项目编号：20180401A
+
+项目名称：智能外访
+
+问题：项目已经上线，过程中出现预测结果为空的问题，这属于算法数据处理中的BUG修复
+
+解决办法：第一时间联系到负责的IT开发人员，并找到模型日志，在第一时间找到的原因兴业模型没有跑出来，是数据分析师在回收率计算中没有考虑一些异常情况比如委案金额为0的情况，最终在第一时间成功修复了这个数据处理的异常，是的代码更稳健。
+
+暴露的问题：数据分析师在编写程序时要考虑极端的情形，做好线上部署前的充分测试。在后期的项目中要把项目部署前的测试划归在项目计划中
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\chapter{项目管理}\label{ux7ba1ux7406}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{1.项目时间调度问题}
+
+问题：项目管理过程中，发现每位工程师面对多个项目时时间安排上比较混乱，导致不能在一段时间内专注于一个项目。
+
+解决办法：每个项目确定一位技术负责人，并由项目负责人做好时间安排，为每个项目划分独立研究的时间段，两个大型项目不会安排在同一时间同时进行。
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\chapter{其他突发应急预案}\label{ux5176ux4ed6}
+
+\bibliography{book.bib,packages.bib}
+
+
+\end{document}

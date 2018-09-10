@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>智能中心项目研发经验手册</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="智能中心项目研发经验手册" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="智能中心项目研发经验手册" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="智能中心">
+
+
+<meta name="date" content="2018-09-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="总结.html">
+<link rel="next" href="管理.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css\toc.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://github.com/DataXujing/jy_book" target='blank'>项目地址</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>序言</a></li>
+<li class="chapter" data-level="1" data-path="need.html"><a href="need.html"><i class="fa fa-check"></i><b>1</b> 需求阶段</a></li>
+<li class="chapter" data-level="2" data-path="project.html"><a href="project.html"><i class="fa fa-check"></i><b>2</b> 立项阶段</a></li>
+<li class="chapter" data-level="3" data-path="start.html"><a href="start.html"><i class="fa fa-check"></i><b>3</b> 项目启动阶段</a></li>
+<li class="chapter" data-level="4" data-path="model.html"><a href="model.html"><i class="fa fa-check"></i><b>4</b> 项目研发阶段</a></li>
+<li class="chapter" data-level="5" data-path="部署.html"><a href="部署.html"><i class="fa fa-check"></i><b>5</b> 项目上线阶段</a></li>
+<li class="chapter" data-level="6" data-path="宣导.html"><a href="宣导.html"><i class="fa fa-check"></i><b>6</b> 项目宣导阶段</a></li>
+<li class="chapter" data-level="7" data-path="总结.html"><a href="总结.html"><i class="fa fa-check"></i><b>7</b> 项目总结阶段</a></li>
+<li class="chapter" data-level="8" data-path="跟踪.html"><a href="跟踪.html"><i class="fa fa-check"></i><b>8</b> 项目后期跟进修改阶段</a></li>
+<li class="chapter" data-level="9" data-path="管理.html"><a href="管理.html"><i class="fa fa-check"></i><b>9</b> 项目管理</a></li>
+<li class="chapter" data-level="10" data-path="其他.html"><a href="其他.html"><i class="fa fa-check"></i><b>10</b> 其他突发应急预案</a></li>
+<li class="divider"></li>
+<li><a href="http://www.inter-credit.net/" target="blank">公司主页</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">智能中心项目研发经验手册</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="跟踪" class="section level1">
+<h1><span class="header-section-number">第 8 章</span> 项目后期跟进修改阶段</h1>
+<hr />
+<p><strong>1. 数据处理问题</strong></p>
+<p>项目编号：20180401A</p>
+<p>项目名称：智能外访</p>
+<p>问题：项目已经上线，过程中出现预测结果为空的问题，这属于算法数据处理中的BUG修复</p>
+<p>解决办法：第一时间联系到负责的IT开发人员，并找到模型日志，在第一时间找到的原因兴业模型没有跑出来，是数据分析师在回收率计算中没有考虑一些异常情况比如委案金额为0的情况，最终在第一时间成功修复了这个数据处理的异常，是的代码更稳健。</p>
+<p>暴露的问题：数据分析师在编写程序时要考虑极端的情形，做好线上部署前的充分测试。在后期的项目中要把项目部署前的测试划归在项目计划中</p>
+<hr />
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="鎬荤粨.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="管理.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["jy_book.pdf", "jy_book.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
